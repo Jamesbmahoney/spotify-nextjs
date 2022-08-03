@@ -9,7 +9,7 @@ export default function Home() {
       </Head>
 
       <main className="bg-black h-screen overflow-hidden">
-        <Sidebar />
+        <Sidebar />       
         {/* Center */}
       </main>
 
