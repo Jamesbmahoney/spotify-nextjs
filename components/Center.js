@@ -5,6 +5,7 @@ import { shuffle } from "lodash";
 import { useRecoilValue, useRecoilState } from "recoil";
 import { playlistIdState, playlistState } from "../atoms/playlistAtom";
 import useSpotify from "../hooks/useSpotify";
+import Songs from "../components/Songs";
 
 const colors = [
   "from-indigo-500",
@@ -21,8 +22,7 @@ function Center() {
   const spotifyAPI = useSpotify();
   const [color, setColor] = useState(null);
   const playlistId = useRecoilValue(playlistIdState);
-  const [playlist, setPlaylist] = useRecoilState(playlistState);
-  const [isActive, setActive] = useState("false");
+  const [playlist, setPlaylist] = useRecoilState(playlistState); 
 
   useEffect(() => {
     setColor(shuffle(colors).pop());
